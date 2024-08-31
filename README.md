@@ -1,3 +1,4 @@
+
 ****** README.txt *****
 
 # Title: Find Circles Image Analysis
@@ -6,7 +7,7 @@
 This code uses the Matlab package imfindcircles to identify the number and size of 
 droplets in a given field of view. Code was manually adjusted and run for different 
 data sets as appropriate. Included here is sample code used to analyze P700-Mg2+ 
-condensates with pLLR346. Matlab file was manually adjusted for image set. 
+condensates with pLL346 plasmid DNA. 
 
 
 ### Contributors
@@ -34,26 +35,26 @@ For use, please cite the above publication.
 
 
 ## File Overview
+- ChawlaTomEtAl_2024_FindCircles.m: identifies circles & droplets 
 
-- FindCircles_v1_240511.m: identifies circles & droplets 
-- TidyData_PostSegmentation_v1_240511.m: transforms output file of findcircles
-to tidydata format (csv)
+- ChawlaTomEtAl_2024_TidyData_PostSegmentation.m: transforms output file of findcircles to tidydata format (.csv)
 
 
 
 ## HOW TO USE: 
-1. Open FindCircles_v1_240511.m and TidyData_PostSegmentation_v1_240511.m in Matlab.
-2. Locate data (demo data available for download from Zenodo: DOI 10.5281/zenodo.13324260).
-3. Move these image files to the same directory as the code. Image files must be 
+1. Open ChawlaTomEtAl_2024_FindCircles.m and ChawlaTomEtAl_2024_TidyData_PostSegmentation.m in Matlab.
+2. Locate data (demo data called FindCirclesDemoData available for download from Zenodo: DOI 10.5281/zenodo.13324260, 
+and in GitHub: https://github.com/RackiLab/Chawla_and_Tom_2024_etal).
+3. Move these image files (.tif files) to the same directory as the code. Image files must be 
    in a subdirectory relative to the code file. It should be okay if files are in
    directories n directories down, as long as n is at least 1 relative to 
-   FindCircles_v1_24011.m
-4. Run FindCircles_v1_240511. You will be prompted for inputs:
+   ChawlaTomEtAl_2024_FindCircles.m
+4. Run ChawlaTomEtAl_2024_FindCircles.m. You will be prompted for inputs:
    (a) Press any number to proceed 
    (b) Enter the image number (starting at 1)
    (c) Parameter adjustment (to use defaults press 0, otherwise 1)
-       i. set max radius (50, adjust as needed) & sensitivity (default = 0.85)
-5. FindCircles_v1_240511 will then run TidyData_PostSegmentation_v1_240511.
+       If 1: set max radius (50, adjust as needed) & sensitivity (default = 0.85, adjust as needed)
+5. At the end of ChawlaTomEtAl_2024_FindCircles.m will run ChawlaTomEtAl_2024_TidyData_PostSegmentation.m.
    (a) You will be prompted to accept the tidy data parameters. 
 6. Code will prompt for the next image number. 
 
